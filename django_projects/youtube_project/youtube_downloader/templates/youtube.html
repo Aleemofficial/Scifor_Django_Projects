@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe0f0, #ffffcc); /* Pale pink and yellow gradient background */
+      font-family: Arial, sans-serif; /* Set font family */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Make the body take up the full viewport height */
+      margin: 0; /* Remove default margin */
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for container */
+      padding: 20px; /* Add padding to the container */
+      border-radius: 10px; /* Add rounded corners */
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); /* Add a slight shadow */
+    }
+
+    h1 {
+      text-align: center; /* Center the heading */
+      color: #333333; /* Set heading color */
+    }
+
+    form {
+      text-align: center; /* Center the form */
+    }
+
+    input[type="text"] {
+      width: 80%; /* Set width of text input */
+      padding: 10px; /* Add padding to text input */
+      margin-bottom: 10px; /* Add some bottom margin for spacing */
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px; /* Add padding to submit button */
+      background-color: #4CAF50; /* Set background color of submit button */
+      color: white; /* Set text color of submit button */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Add rounded corners to submit button */
+      cursor: pointer; /* Add pointer cursor on hover */
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049; /* Change background color on hover */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Youtube Video Downloader</h1>
+
+  <form action="" method="post">
+    {% csrf_token %}
+    <label for="link">Enter URL:</label><br>
+    <input type="text" id="link" name="link"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

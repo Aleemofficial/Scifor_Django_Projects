@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+}
+
+.profile-img {
+    background: url('https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-confident-1714666150') no-repeat center center/cover;
+    width: 50vw; /* Use a real image in production */
+    height: 100vh;
+}
+
+.about-text {
+    width: 50vw;
+    background: white;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
