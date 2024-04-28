@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  transition: all 0.3s ease;
+}
+:root{
+  --white: #fff;
+  --black: #24292d;
+  --nav-main: #4070f4;
+  --switchers-main: #0b3cc1;
+  --light-bg: #F0F8FF;
+}
+nav{
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  background: var(--nav-main);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+nav .navbar{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+nav .navbar a{
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+}
+ .navbar .nav-links{
+   display: flex;
+ }
+ .navbar .nav-links li{
+   margin: 0 8px;
+   list-style: none;
+   display: flex;
+ }
+ .navbar .nav-links a{
+   font-size: 18px;
+   font-weight: 400;
+   opacity: 1;
+ }
+  .navbar .nav-links a:hover{
+    opacity: 1;
+  }
+ .navbar .appearance{
+   display: flex;
+   align-items: center;
+ }
+ .appearance .light-dark,
+ .appearance .icons{
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--white);
+  font-size: 20px;
+  background: var(--switchers-main);
+  cursor: pointer;
+}
+.appearance .light-dark i,
+.appearance .icons i{
+  opacity: 1;
+}
+.appearance .light-dark:hover i,
+.appearance .icons:hover i{
+  opacity: 1;
+}
+.appearance .light-dark:hover{
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1)
+}
+.appearance .light-dark i{
+  height: 100%;
+  width: 100%;
+}
+ .appearance .color-icon{
+   position: relative;
+ }
+ .appearance .icons{
+   width: 70px;
+   height: 50px;
+   margin-left: 14px;
+ }
+ .appearance .color-box{
+   position: absolute;
+   bottom: -133px;
+   right: 0;
+   min-height: 100px;
+   background: var(--white);
+   padding: 16px 20px 20px 20px;
+   border-radius: 6px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   opacity: 0;
+   pointer-events: none;
+ }
+ .color-box::before{
+   content: '';
+   position: absolute;
+   top: -10px;
+   right: 20px;
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   background: var(--white);
+   transform: rotate(45deg);
+ }
+ .color-icon.open .color-box{
+   opacity: 1;
+   pointer-events: auto;
+ }
+  .color-icon.open .arrow{
+    transform: rotate(-180deg);
+  }
+ .appearance .color-box h3{
+   font-size: 16px;
+   font-weight: 600;
+   display: block;
+   color: var(--nav-main);
+   text-align: left;
+   white-space: nowrap;
+   margin-bottom: 10px;
+ }
+.appearance .color-box .color-switchers{
+   display: flex;
+}
+.color-box .color-switchers .btn{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  background: #4070F4;
+
+}
+.color-switchers .btn.blue.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #4070F4;
+}
+.color-switchers .btn.orange{
+  background: #F79F1F;
+}
+.color-switchers .btn.orange.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #F79F1F;
+}
+.color-switchers .btn.purple{
+  background: #8e44ad;
+}
+.color-switchers .btn.purple.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #8e44Ad;
+}
+.color-switchers .btn.green{
+  background: #3A9943;
+}
+.color-switchers .btn.green.active{
+  box-shadow: 0 0 0 2px #fff,
+              0 0 0 4px #3A9943;
+}
+.home-content{
+  height: 100vh;
+  width: 100%;
+  background: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+}
+
+  /* CSS for square-buttons */
+  .square-buttons {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line if necessary */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Add spacing between buttons */
+  }
+  
+  /* CSS for square-button */
+  .square-button {
+    width: 150px; /* Set width */
+    height: 150px; /* Set height */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #ffffff; /* Set background color */
+    border: 2px solid #000000; /* Add border */
+    border-radius: 10px; /* Add border radius */
+    text-align: center; /* Center text horizontally */
+    text-decoration: none; /* Remove underline from links */
+    color: #000000; /* Set text color */
+    font-size: 18px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+  }
+  
+  .square-button:hover {
+    background-color: #000000; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+  
+  /* Optional: Add additional styles for each button */
+  .art-button .square-button {
+    background-image: url('https://t3.ftcdn.net/jpg/02/28/18/62/360_F_228186227_hTEQS8k4VtopmEVnkBbPvOaSIfXsqWON.jpg'); /* Replace 'path/to/your/art/image.jpg' with the path to your art image */
+    background-size: cover; /* Cover the entire button with the background image */
+  }
+  
+  .write-button .square-button {
+    background-image: url('https://static-web.grammarly.com/1e6ajr2k4140/75IFN2KXay95QcYR7usTWp/b23584807f2575942964c54bfcd6dfdf/Group_625989.png?w=1280'); /* Replace 'path/to/your/write/image.jpg' with the path to your write image */
+    background-size: cover; /* Cover the entire button with the background image */
+  }
+  
+  .music-button .square-button {
+    background-image: url('https://i.pinimg.com/736x/4c/b4/1a/4cb41a2d05f36fc0bcf44a59b6cfdaa5.jpg'); /* Replace 'path/to/your/music/image.jpg' with the path to your music image */
+    background-size: cover; /* Cover the entire button with the background image */
+  }
+  
+  .puzzles-button .square-button {
+    background-image: url('https://thumbs.dreamstime.com/b/illustration-puzzle-pieces-vector-132599133.jpg'); /* Replace 'path/to/your/puzzles/image.jpg' with the path to your puzzles image */
+    background-size: cover; /* Cover the entire button with the background image */
+  }
+  

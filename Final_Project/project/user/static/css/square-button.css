@@ -1,0 +1,80 @@
+/* Add this CSS to your existing stylesheet or create a new one */
+
+/* Modify the CSS for square buttons alignment */
+.square-buttons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align the buttons horizontally */
+    align-items: center; /* Center align the buttons vertically */
+    margin-top: 50px; /* Adjust the top margin as needed */
+    margin-bottom: 50px; /* Adjust the bottom margin as needed */
+    padding: 40px; /* Add padding around the buttons */
+    margin: 50px;
+}
+
+.square-button {
+    width: 150px; /* Adjust the width of the buttons as needed */
+    height: 150px; /* Adjust the height of the buttons as needed */
+    color: #070505; /* Change the text color as needed */
+    text-align: center;
+    font-size: 20px; /* Adjust the font size as needed */
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+    position: relative; /* Position for background image and text */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.square-button::before {
+    content: ''; /* Empty content for background image */
+    position: absolute; /* Position the background image */
+    top: 0; /* Align background image to top */
+    left: 0; /* Align background image to left */
+    width: 100%; /* Set background image width */
+    height: 100%; /* Set background image height */
+    background-size: cover; /* Cover background image */
+    background-position: center; /* Center background image */
+    z-index: -1; /* Set background image behind text */
+}
+
+.square-button span {
+    position: relative; /* Position text relative to button */
+    line-height: 150px; /* Center the text vertically */
+}
+
+.square-button:hover::before {
+    filter: brightness(70%); /* Add brightness effect on hover for background image */
+}
+
+/* Optional: Add box shadow for a raised effect */
+.square-button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust background images for each button */
+.art-button .square-button::before {
+    background-image: url('https://t3.ftcdn.net/jpg/02/28/18/62/360_F_228186227_hTEQS8k4VtopmEVnkBbPvOaSIfXsqWON.jpg'); /* Replace 'path/to/art_image.png' with the path to your art image */
+}
+
+.write-button .square-button::before {
+    background-image: url('https://static-web.grammarly.com/1e6ajr2k4140/75IFN2KXay95QcYR7usTWp/b23584807f2575942964c54bfcd6dfdf/Group_625989.png?w=1280'); /* Replace 'path/to/write_image.png' with the path to your write image */
+}
+
+.music-button .square-button::before {
+    background-image: url('https://i.pinimg.com/736x/4c/b4/1a/4cb41a2d05f36fc0bcf44a59b6cfdaa5.jpg'); /* Replace 'path/to/music_image.png' with the path to your music image */
+}
+
+.puzzles-button .square-button::before {
+    background-image: url('https://thumbs.dreamstime.com/b/illustration-puzzle-pieces-vector-132599133.jpg'); /* Replace 'path/to/puzzles_image.png' with the path to your puzzles image */
+}
+
+/* Add this CSS to your existing stylesheet or create a new one */
+
+.big-heading {
+    text-align: center;
+    margin-top: 50px; /* Adjust the top margin as needed */
+    margin-bottom: 30px; /* Adjust the bottom margin as needed */
+    font-size: 36px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the color as needed */
+}
